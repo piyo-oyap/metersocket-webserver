@@ -19,6 +19,11 @@ function resetSwitch() {
         fetch("api/update.php?id=5&status=1");
 }
 
+function logout() {
+	if (confirm("Are you sure to logout?"))
+		window.location.replace("logout.php");
+}
+
 var isDataReceiving = false;
 function fetchData() {
     if (!isDataReceiving) {
